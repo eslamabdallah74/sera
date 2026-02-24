@@ -19,42 +19,25 @@ This is an interactive web experience that presents the noble lineage (النس�
 - **SEO Optimized**: Complete meta tags, Open Graph, Twitter Cards, and structured data
 - **PWA Ready**: Progressive Web App support for app-like experience
 - **Accessibility**: RTL (Right-to-Left) support for Arabic content
+- **Mouse Drag**: Drag to scroll horizontally through governance cards
 
-## 🚀 Quick Start
+## 🚀 Live Demo
 
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A web server (Apache, Nginx, or any static hosting service)
-
-### Installation
-
-1. Clone or download this repository
-2. Place all files in your web server's public directory
-3. Open `nasab-story.html` in your browser
-
-```bash
-# Using a simple Python server
-python -m http.server 8000
-
-# Using Node.js http-server
-npx http-server -p 8000
-```
-
-Then visit: `http://localhost:8000/nasab-story.html`
+Visit the live site: [https://eslamabdallah74.github.io/sera/](https://eslamabdallah74.github.io/sera/)
 
 ## 📁 Project Structure
 
 ```
 .
-├── nasab-story.html          # Main HTML file
-├── favicon.svg              # SVG favicon
-├── manifest.json            # PWA manifest
-├── browserconfig.xml        # Windows tile configuration
-├── robots.txt               # Search engine directives
-├── sitemap.xml              # XML sitemap
-├── SEO-SETUP-GUIDE.md       # SEO setup instructions
-└── README.md                # This file
+├── index.html               # Main HTML file (renamed from nasab-story.html)
+├── favicon.svg             # SVG favicon with gold design
+├── og-image.svg            # Open Graph social media image
+├── manifest.json           # PWA manifest
+├── browserconfig.xml       # Windows tile configuration
+├── robots.txt             # Search engine directives
+├── sitemap.xml            # XML sitemap
+├── SEO-SETUP-GUIDE.md    # SEO setup instructions
+└── README.md              # This file
 ```
 
 ## 🎨 Design System
@@ -79,34 +62,23 @@ Then visit: `http://localhost:8000/nasab-story.html`
 
 ## 🔧 Configuration
 
-### Updating URLs
+### GitHub Pages Setup
 
-Replace all placeholder URLs in `nasab-story.html`:
+The site is already configured for GitHub Pages:
 
-```html
-<!-- Replace with your actual domain -->
-https://yourwebsite.com/nasab-story.html
-https://yourwebsite.com/images/og-image.jpg
-https://yourwebsite.com/images/twitter-image.jpg
-https://yourwebsite.com/logo.png
-```
+1. Repository: `eslamabdallah74/sera`
+2. URL: `https://eslamabdallah74.github.io/sera/`
+3. Main file: `index.html`
 
-### Updating Twitter Handle
+### Adding Additional Favicon Sizes
 
-```html
-<meta name="twitter:site" content="@yourusername">
-<meta name="twitter:creator" content="@yourusername">
-```
-
-### Creating Favicon Images
-
-Use the provided `favicon.svg` as a base to generate other formats:
+The main `favicon.svg` is created. To generate additional favicon sizes:
 
 **Option 1: Online Generator**
 1. Visit [RealFaviconGenerator](https://realfavicongenerator.net/)
 2. Upload `favicon.svg`
 3. Download all generated files
-4. Place them in your root directory
+4. Place them in your repository root
 
 **Option 2: Command Line (ImageMagick)**
 ```bash
@@ -119,14 +91,14 @@ convert favicon.svg -resize 512x512 android-icon-512x512.png
 convert favicon.svg -resize 32x32 favicon.ico
 ```
 
-### Required Favicon Files
+### Required Favicon Files (Optional)
 
 ```
 favicon.ico
 favicon-16x16.png
 favicon-32x32.png
 favicon-96x96.png
-favicon.svg
+favicon.svg (already created)
 apple-icon-57x57.png
 apple-icon-60x60.png
 apple-icon-72x72.png
@@ -159,7 +131,7 @@ mstile-310x150.png
 
 Complete Facebook/LinkedIn sharing support with:
 - Type, URL, title, description
-- Image (1200x630px recommended)
+- Image (SVG format)
 - Locale (Arabic + English)
 - Site name
 
@@ -168,7 +140,7 @@ Complete Facebook/LinkedIn sharing support with:
 Full Twitter Card support:
 - Card type: summary_large_image
 - URL, title, description, image
-- Site and creator handles
+- SVG image format
 
 ### Structured Data (JSON-LD)
 
@@ -194,9 +166,10 @@ The site is fully responsive with:
 
 - Responsive viewport meta tag
 - Touch-friendly navigation
-- Mobile-specific chapNav positioning
+- Mobile-specific chapNav positioning (fixed to right edge)
 - PWA manifest for app-like experience
 - Optimized font loading
+- Mouse drag support for horizontal scrolling
 
 ## 🧪 Testing
 
@@ -218,22 +191,24 @@ Test on:
 
 ## 🚀 Deployment
 
-### Static Hosting
+### GitHub Pages (Already Deployed)
 
-Deploy to any static hosting service:
+The site is already deployed at: [https://eslamabdallah74.github.io/sera/](https://eslamabdallah74.github.io/sera/)
 
-- **Netlify**: Drag and drop the folder
-- **Vercel**: Connect your repository
-- **GitHub Pages**: Push to a repository
-- **Cloudflare Pages**: Connect your repository
-- **AWS S3**: Upload to a bucket
+To update:
+1. Make changes to files
+2. Commit and push to GitHub
+3. GitHub Pages will automatically deploy
 
 ### Custom Domain
 
-1. Update all URLs in `nasab-story.html`
+To use a custom domain:
+
+1. Update all URLs in `index.html`
 2. Update `sitemap.xml` with your domain
 3. Update `manifest.json` with your domain
 4. Configure DNS for your custom domain
+5. Update GitHub Pages settings
 
 ## 📊 Performance Optimization
 
@@ -256,6 +231,31 @@ Deploy to any static hosting service:
 - **Image Compression**: [TinyPNG](https://tinypng.com/), [Squoosh](https://squoosh.app/)
 - **Minification**: [HTMLMinifier](https://kangax.github.io/html-minifier/)
 - **Performance**: [Google PageSpeed Insights](https://pagespeed.web.dev/)
+
+## 🎯 Interactive Features
+
+### Mouse Drag Scrolling
+
+The governance cards section (`.gov-scroll`) supports mouse drag scrolling:
+
+- Click and drag left/right to scroll
+- Visual feedback with cursor changes
+- Smooth scrolling experience
+- Touch-friendly for mobile devices
+
+### Chapter Navigation
+
+- Fixed navigation dots on the right side
+- Click to jump to specific chapters
+- Hover shows chapter labels
+- Active state indication
+
+### Family Tree
+
+- Interactive family tree visualization
+- Click on nodes to see details
+- Animated hover effects
+- Color-coded relationships
 
 ## 🤝 Contributing
 
@@ -291,6 +291,17 @@ For questions, issues, or suggestions:
 - [Twitter Card Documentation](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards)
 - [Schema.org](https://schema.org/)
 - [PWA Best Practices](https://web.dev/progressive-web-apps/)
+
+## 📸 Screenshots
+
+The site features:
+
+- Elegant dark and parchment alternating themes
+- Gold accent colors throughout
+- Arabic calligraphy and typography
+- Interactive family tree visualization
+- Governance system cards with drag-to-scroll
+- Smooth animations and transitions
 
 ---
 

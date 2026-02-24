@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /admin/
 
 # Sitemap location
-Sitemap: https://yourwebsite.com/sitemap.xml
+Sitemap: https://eslamabdallah74.github.io/sera/sitemap.xml
 
 # Crawl-delay (optional, adjust based on server capacity)
 # Crawl-delay: 1

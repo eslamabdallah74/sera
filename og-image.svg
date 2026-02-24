@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0C0A06"/>
+      <stop offset="50%" style="stop-color:#141008"/>
+      <stop offset="100%" style="stop-color:#0A0C10"/>
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0CC70"/>
+      <stop offset="50%" style="stop-color:#D4A843"/>
+      <stop offset="100%" style="stop-color:#B8860B"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Decorative Islamic Pattern (simplified) -->
+  <g opacity="0.1">
+    <circle cx="600" cy="315" r="200" fill="none" stroke="url(#goldGradient)" stroke-width="1"/>
+    <circle cx="600" cy="315" r="250" fill="none" stroke="url(#goldGradient)" stroke-width="0.5"/>
+    <circle cx="600" cy="315" r="300" fill="none" stroke="url(#goldGradient)" stroke-width="0.3"/>
+  </g>
+
+  <!-- Decorative corners -->
+  <g stroke="url(#goldGradient)" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Top left -->
+    <path d="M 50 50 L 50 120 L 120 50"/>
+    <!-- Top right -->
+    <path d="M 1150 50 L 1150 120 L 1080 50"/>
+    <!-- Bottom left -->
+    <path d="M 50 580 L 50 510 L 120 580"/>
+    <!-- Bottom right -->
+    <path d="M 1150 580 L 1150 510 L 1080 580"/>
+  </g>
+
+  <!-- Main content container -->
+  <g text-anchor="middle" font-family="'Scheherazade New', 'Amiri', serif">
+    <!-- Arabic letter "م" (Muhammad) -->
+    <text x="600" y="280" font-size="120" font-weight="bold" fill="url(#goldGradient)" filter="url(#glow)">م</text>
+
+    <!-- Title -->
+    <text x="600" y="380" font-size="56" font-weight="bold" fill="#F0CC70">النسب النبوي الشريف</text>
+
+    <!-- Subtitle -->
+    <text x="600" y="440" font-size="32" fill="#D4A843" opacity="0.9">رحلة عبر الأجداد</text>
+
+    <!-- Decorative line -->
+    <line x1="400" y1="470" x2="800" y2="470" stroke="url(#goldGradient)" stroke-width="2" opacity="0.5"/>
+
+    <!-- Small text -->
+    <text x="600" y="510" font-size="20" fill="#B8860B" opacity="0.7">من إبراهيم عليه السلام إلى النبي محمد ﷺ</text>
+  </g>
+
+  <!-- Decorative dots -->
+  <g fill="#D4A843" opacity="0.4">
+    <circle cx="100" cy="100" r="3"/>
+    <circle cx="1100" cy="100" r="3"/>
+    <circle cx="100" cy="530" r="3"/>
+    <circle cx="1100" cy="530" r="3"/>
+  </g>
+</svg>
