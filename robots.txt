@@ -1,0 +1,43 @@
+# robots.txt for النسب النبوي الشريف
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow specific paths if needed
+# Disallow: /private/
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Crawl-delay (optional, adjust based on server capacity)
+# Crawl-delay: 1
+
+# Disallow common system files
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+Disallow: /logs/
+Disallow: /config/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /README.md
+Disallow: /browserconfig.xml
+Disallow: /manifest.json
+
+# Allow important assets
+Allow: /images/
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
